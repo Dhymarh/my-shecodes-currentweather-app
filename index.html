@@ -7,23 +7,31 @@
 </head>
 <body>
     <div class="weather-app">
-        <form>
-            <input type="text" placeholder="Enter a city...." required >
-            <input type="submit" value="Search">
-        </form>
+        <header>
+            <form class="search-form">
+                <input type="text" placeholder="Enter a city...." required class="search-input">
+                <input type="submit" value="Search" class="search-button">
+            </form>
+        </header>
 
-        <div class="main">
-            <h1>Paris</h1>
-            <p>Friday 15:33, broken clouds
-                <br>
-                Humidity: 78%, Wind: 8.23km/h
-            </p>
-            <span>⛅ 11&deg;C</span>
-        </div>
+        <main>
+            <div class="weather-app-data">
+                <h1 class="weather-app-city">Paris</h1>
+                <p class="weather-app-details">Friday 15:33, broken clouds
+                    <br>
+                    Humidity: <strong>78%</strong>, Wind: <strong>8.23km/h</strong>
+                </p>
+    
+                <div class="weather-app-temperature">
+                    <span class="temperature-icon">⛅</span>
+                    <span class="temperature-value">11</span> <span class="temperature-degree">&deg;C</span>
+                </div>
+            </div>
+        </main>
 
         <footer>This project was coded by
             <a href="https://github.com/Dhymarh">Chidinma Odoh</a>, is
-            <a href="https://github.com/Dhymarh/my-shecodes-weather-app">open-sourced on Github</a> and <a href="http://">hosted on Netlify</a>
+            <a href="https://github.com/Dhymarh/my-shecodes-weather-app">open-sourced on Github</a> and <a href="https://my-shecodes-weather-app-project.netlify.app/">hosted on Netlify</a>
         </footer>
     </div>
 </body>
