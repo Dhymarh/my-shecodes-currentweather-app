@@ -64,7 +64,7 @@ main{
 
 .weather-app-city{
     font-size: 40px;
-    font-weight: 900;
+    font-weight: 800;
     margin: 0;
     line-height: 48px;
 }
@@ -86,7 +86,7 @@ strong{
    
 .temperature-icon {
     font-size: 40px;
-    margin-top: 22px;
+    margin-top: 25px;
     margin-right: -10px;
 }
 
