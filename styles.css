@@ -5,7 +5,7 @@
                     hsl(13deg 25% 53%) 51%,
                     hsl(333deg 4% 47%) 91%,
                     hsl(248deg 3% 47%) 100%);
-            margin: 5px auto;
+            margin: 0px auto;
             padding: 10px 80px;
             border-radius: 6px;
             font-family: "Manjari", sans-serif;
@@ -24,15 +24,16 @@ a:hover {
     background-image: url('images/weather\ background.jpg');
         background-size: cover;
         background-position: center;
-   max-width: 700px;
+   max-width: 650px;
     margin:10px auto;
-    padding: 50px;
+    padding: 50px 70px;
     box-shadow:0 30px 50px rgba(65, 50, 100, 0.08) ;
     border-radius: 10px;
 }
 
 header{
     padding-bottom:30px;
+    padding-left: 25px;
     border-bottom:0px solid #f9f7fe ;
 }
 
@@ -141,6 +142,14 @@ strong{
     margin-top: 30px;
 }
 
+
+.weather-forecast-day{
+    border-radius: 10px;
+    margin-left: 20px;
+    backdrop-filter: blur(3px);
+    padding: 10px;
+    border-radius: 10px;
+}
 .weather-forecast-date {
     text-align: center;
     color: rgba(39, 33, 66, 0.4);
