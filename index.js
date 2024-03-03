@@ -10,7 +10,7 @@ function updateWeather(response) {
   let date = new Date(response.data.time * 1000);
   let icon = document.querySelector("#icon");
   
-  
+  console.log(response.data);
   
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
@@ -20,6 +20,7 @@ function updateWeather(response) {
   icon.innerHTML = ` <img src= ${response.data.condition.icon_url} class="temperature-icon"/>`;
   temperatureElement.innerHTML = Math.round(temperature);
 }
+
 
 
 function formatDate(date) {
@@ -37,16 +38,42 @@ function formatDate(date) {
   ];
   
   let day = days[date.getDay()];
-
+  
   if (hours < 10 ) {
     hours = `0${hours}`;
   }
-
-   if (minutes < 10 ) {
+  
+  if (minutes < 10 ) {
     hours = `0${minutes}`;
   }
+  
+  let months =  [
+    "January",
+    "February", 
+    "March", 
+    "April", 
+    "May", 
+    "June",
+    "July",
+    "August",
+    "September", 
+    "October", 
+    "November", 
+    "December", 
+  ];
+  
+  
+  let month = months[date.getMonth()];
+  let year = date.getFullYear();
+  let today = date.getDate();
 
-  return `${day} ${hours}:${minutes}`;
+  let todayElement = document.querySelector("#today-time");
+  todayElement.innerHTML = `${hours}:${minutes}`;
+  
+  return ` ${day}, ${today}  ${month} ${year}`;
+  
+
+
 }
 
 

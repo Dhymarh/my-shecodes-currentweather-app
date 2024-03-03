@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
    
@@ -25,22 +26,31 @@
             <div class="weather-app-data">
                 <div>
                     <h1 class="weather-app-city" id="city"></h1>
-                <p class="weather-app-details">
-                    <span id="time"></span>, 
+                    <p class="weather-app-details">
+                        <span id="time"></span>
+                    <br>
+                    <span id="today-time"></span>
+                    <br>
                     <span id="description"></span>
                     <br>
-                    Humidity: <strong id="humidity">%</strong>, Wind: <strong id="wind-speed">km/h</strong>
                 </p>
-                </div>
-    
-                <div class="weather-app-temperature">
-                    <div id="icon"></div>
-                    <span id="temperature" class="temperature-value"></span> 
-                    <span class="temperature-degree">°C</span>
-                </div>
             </div>
-
-            <div class="weather-forecast">
+            
+            <div class="weather-app-temperature">
+                <div id="icon"></div>
+                <span id="temperature" class="temperature-value"></span> 
+                <span class="temperature-degree">°C</span>
+            </div>
+        </div>
+        
+        <div class="current-conditions">
+            <p>
+                <span >Humidity: <strong id="humidity">%</strong></span>
+                <br>
+                <span >Wind: <strong id="wind-speed">km/h</strong></span>
+            </p>
+    </div>
+    <div class="weather-forecast">
                 <div class="weather-forecast-day">
                     <div class="weather-forecast-date">Tue</div>
                     <div class="weather-forecast-icon">🌤️</div>
