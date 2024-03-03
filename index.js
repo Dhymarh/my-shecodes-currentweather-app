@@ -10,7 +10,6 @@ function updateWeather(response) {
   let date = new Date(response.data.time * 1000);
   let icon = document.querySelector("#icon");
   
-  console.log(response.data);
   
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
@@ -90,10 +89,40 @@ function searchCity(city) {
 function searchSubmit(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");
- 
+  
   searchCity(searchInputElement.value);
 }
 
+function displayForecast() {
+  
+  let forecastHtml = "";
+  
+  let days = [
+    "Tue",
+    "Wed",
+    "Thur",
+    "Fri",
+    "Sat"
+  ];
+  
+  days.forEach(function(day) {
+    forecastHtml = 
+    forecastHtml +
+    `
+    <div class="weather-forecast-day">
+    <div class="weather-forecast-date">${day}</div>
+    <div class="weather-forecast-icon">🌤️</div>
+    <div class="weather-forecast-temperatures">
+    <div class="weather-forecast-temperature"> <strong>15º</strong> </div>
+    <div class="weather-forecast-temperature">9º</div>
+    </div>
+    </div>
+    `;
+  });
+  
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
 
 
 let searchFormElement = document.querySelector("#search-form");
@@ -101,3 +130,4 @@ searchFormElement.addEventListener("submit", searchSubmit);
 
 
 searchCity("Nigeria");
+displayForecast();
