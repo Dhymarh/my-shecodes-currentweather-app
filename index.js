@@ -9,7 +9,7 @@ function updateWeather(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   let icon = document.querySelector("#icon");
-  
+
   
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
@@ -20,11 +20,12 @@ function updateWeather(response) {
   temperatureElement.innerHTML = Math.round(temperature);
 
   getForecast(response.data.city);
-
+  changeBackground(response.data.condition.description);
 }
 
-function changeBackground(weatherCondition, currentHour) {
-  let currentHour = new Date.getHours();
+
+function changeBackground(weatherCondition) {
+  let currentHour = new Date().getHours();
   let background = document.querySelector(".weather-app");
 
   if (currentHour >= 0 && currentHour < 12 ) {
@@ -140,7 +141,7 @@ function formatDate(date) {
   }
   
   if (minutes < 10 ) {
-    hours = `0${minutes}`;
+    minutes = `0${minutes}`;
   }
   
   let months =  [
@@ -240,5 +241,3 @@ searchFormElement.addEventListener("submit", searchSubmit);
 
 
 searchCity("Nigeria");
-changeBackground();
-
